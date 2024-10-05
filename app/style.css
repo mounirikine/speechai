@@ -1,0 +1,320 @@
+body{
+  background: #000000;
+  color: #ffff;
+}
+
+
+.hero {
+  background-image: url("../public/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.test {
+  background-image: url("../public/hero2.webp");
+}
+/* Infinite Slider Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo-slider {
+  display: flex;
+  gap: 2rem; /* Adjust the gap between logos */
+  animation: slide 20s linear infinite;
+}
+
+.logo-item {
+  min-width: 250px; /* Keep logos consistent in size */
+}
+
+/* For smoother infinite sliding, duplicate the logos inside the slider */
+.logo-slider::before {
+  content: "";
+  flex-shrink: 0;
+}
+
+.pricing header {
+  color: hsl(233, 13%, 49%);
+  margin: 3.3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .toggle {
+  margin-top: 2rem;
+  color: hsl(234, 14%, 74%);
+  display: flex;
+  align-items: center;
+}
+.pricing .toggle-btn {
+  margin: 0 1rem;
+}
+.pricing .checkbox {
+  display: none;
+}
+
+.pricing .sub {
+  background: linear-gradient(
+    135deg,
+    #9333ea 0%,
+    rgb(76, 84, 241) 100%
+  );
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 25px;
+    width: 50px; */
+  height: 1.6rem;
+  width: 3.3rem;
+  border-radius: 1.6rem;
+  padding: 0.3rem;
+}
+.pricing .circle {
+  background-color: #fff;
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 50%;
+}
+.pricing .checkbox:checked + .sub {
+  justify-content: flex-end;
+}
+
+.pricing .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pricing .card {
+  background: #fff;
+  color: hsl(233, 13%, 49%);
+  border-radius: 0.8rem;
+}
+.pricing .card.active:hover {
+  box-shadow: rgba(81, 17, 220, 0.8) 0px 0px 0px 3px;
+}
+
+.pricing .cards .card.active {
+  background: linear-gradient(
+    135deg,
+    #9333ea 0%,
+    rgb(76, 84, 241) 100%
+  );
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transform: scale(1.1);
+  z-index: 1;
+}
+.pricing ul {
+  margin: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.pricing ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+}
+.pricing ul li.price {
+  font-size: 3rem;
+  color: hsl(232, 13%, 33%);
+  padding-bottom: 2rem;
+}
+.pricing .shadow {
+  box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pricing .card.active .price {
+  color: #fff;
+}
+
+.pricing .btn {
+  margin-top: 1rem;
+  height: 2.6rem;
+  width: 13.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: linear-gradient(
+    135deg,
+    #9333ea 0%,
+    rgb(76, 84, 241) 100%
+  );
+  color: #fff;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+}
+.pricing .btn:hover {
+  cursor: pointer;
+  color: #9333ea;
+  background: white;
+  border: 1px solid #9333ea;
+}
+.pricing .active-btn {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+.pricing .active-btn:hover {
+  background: #9333ea;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.pricing .bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+.pricing .card.active .bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+.pricing .pack {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 280px) {
+  .pricing ul {
+    margin: 1rem;
+  }
+  .pricing h1 {
+    font-size: 1.2rem;
+  }
+  .pricing .toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+  }
+  .pricing .cards {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing .card {
+    transform: scale(0.8);
+    margin-bottom: 1rem;
+  }
+  .pricing .cards .card.active {
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 280px) and (max-width: 320px) {
+  .pricing ul {
+    margin: 20px;
+  }
+  .pricing .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing .card {
+    margin-bottom: 1rem;
+  }
+  .pricing .cards .card.active {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 414px) {
+  .pricing .cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing .card {
+    margin-bottom: 1rem;
+  }
+  .pricing .cards .card.active {
+    transform: scale(1);
+  }
+}
+@media (min-width: 414px) and (max-width: 768px) {
+  .pricing .card {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .pricing .cards .card.active {
+    transform: scale(1);
+  }
+}
+@media (min-width: 768px) and (max-width: 1046px) {
+  .pricing .cards {
+    display: flex;
+  }
+  .pricing .card {
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+  }
+  .pricing .cards .card.active {
+    transform: scale(1);
+  }
+}
+
+
+.login{
+  background-image: url("https://assets.bacancytechnology.com/main-boot-5/images/ai-generative/banner.jpg?v-1");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cl-internal-df7v37{
+  display: none;
+}
+
+.cl-internal-piyvrh{
+  display: none;
+}
+
+.cl-internal-2z8hkq img{
+  width: 200px;
+}
+
+
+.dashboard-layout {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling of the entire layout */
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Adjust header height as needed */
+  background-color: black; /* Header background color */
+  color: white; /* Text color */
+  z-index: 1000; /* Ensure header is above other content */
+}
+
+.fixed-sidebar {
+  position: fixed;
+  top: 60px; /* Align sidebar below the header */
+  left: 0;
+  width: 300px; /* Sidebar width */
+  height: calc(100vh - 60px); /* Full height minus header height */
+  background-color: #000000; /* Sidebar background color */
+  color: white; /* Text color */
+  overflow-y: auto; /* Enable scrolling within sidebar if needed */
+}
+
+.main-content {
+  margin-left: 250px; /* Leave space for the sidebar */
+  margin-top: 60px; /* Leave space for the header */
+  padding: 20px; /* Padding for main content */
+  height: calc(100vh - 60px); /* Full height minus header height */
+  overflow-y: auto; /* Enable scrolling within main content */
+}
