@@ -1,6 +1,7 @@
 'use client';
 
 import { Download, Search, WandSparkles } from 'lucide-react';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Page = () => {
@@ -77,8 +78,14 @@ const Page = () => {
 
       {imageUrl && (
         <div className='w-10/12 lg:w-4/12 mx-auto pt-14'>
-          <img src={imageUrl} alt='Generated AI' className='w-full h-auto' />
-        </div>
+<Image 
+  src={imageUrl} 
+  alt="Generated AI" 
+  width={800} // Set an appropriate width 
+  height={600} // Set an appropriate height 
+  className="w-full h-auto" 
+  layout="responsive" // Ensures responsiveness if needed
+/>        </div>
       )}
 
       {imageUrl && (

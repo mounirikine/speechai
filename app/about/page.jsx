@@ -53,7 +53,7 @@ const page = () => {
               <p className="text-gray-400">
                 Our mission focuses on driving improvement and innovation in AI applications. 
                 We provide tools that allow users to generate creative content effortlessly. 
-                Whether it's text, images, or videos, our platform empowers users to explore the potential of AI technology in their projects.
+                Whether it&apos;s text, images, or videos, our platform empowers users to explore the potential of AI technology in their projects.
               </p>
             </div>
 

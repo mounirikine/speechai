@@ -31,7 +31,7 @@ export default function Home() {
       <section className="min-h-screen flex flex-col items-center justify-center test bg-black">
         <section className="container mx-auto flex items-center justify-center flex-col pt-24">
           <h1 className="text-4xl md:text-6xl w-11/12 md:w-8/12 text-center font-semibold bg-gradient-to-r from-purple-600 via-green-500 to-purple-100 bg-clip-text text-transparent">
-            Advanced AI Solutions for Text to Speech & Image & and Video
+            Advanced  AI Solutions for Text to Speech & Image & and Video
             Generation
           </h1>
           <p className="text-sm md:text-base text-center w-11/12 md:w-6/12 mx-auto mt-5 text-gray-200">
@@ -106,7 +106,7 @@ export default function Home() {
                 </h1>
                 <p className="text-sm sm:text-base">
                   Our AI-powered tool allows you to create stunning,
-                  high-resolution images in seconds. Whether you're looking for
+                  high-resolution images in seconds. Whether you&apos;re looking for
                   creative visuals for marketing, design projects, or personal
                   use, you can generate images that meet your specific needs
                   with incredible quality and speed.
@@ -142,11 +142,13 @@ export default function Home() {
 
           {/* Right content (image) */}
           <div className="w-full md:w-5/12 p-4 md:p-16 mt-10 md:mt-0 ">
-            <img
-              src="https://b2-backblaze-stackpath.b-cdn.net/225458/vfyks0_3f3fc929aba2e4bf330b37728a0d4054d256023e.jpg"
-              className="rounded-2xl"
-              alt="AI-generated image"
-            />
+          <Image
+  src="https://b2-backblaze-stackpath.b-cdn.net/225458/vfyks0_3f3fc929aba2e4bf330b37728a0d4054d256023e.jpg"
+  alt="AI-generated image"
+  width={1200} // Set an appropriate width based on the original image
+  height={800} // Set an appropriate height based on the aspect ratio
+  className="rounded-2xl"
+/>
           </div>
         </div>
       </div>
@@ -155,19 +157,23 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center pt-10">
           {/* Left content */}
           <div className="w-full md:w-7/12 p-4 mt-10 md:mt-0 relative hidden lg:block">
-            <div className="relative">
-              <img
-                className="w-full h-auto"
-                src="https://assets-global.website-files.com/63eba862e4eb8f6d39e4c621/63ed4714204b6637b733596a_available-on-desktop-and-mobile-image-generativeai-x-webflow-template.png"
-                alt=""
-              />
-            </div>
-            <img
-              src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed4776a4b189de702a2716_available-on-desktop-and-mobile-right-image-generativeai-x-webflow-template.png"
-              className="rounded-2xl absolute w-[120px] sm:w-[150px] top-32 left-5 sm:left-10"
-              alt="AI-generated image"
-            />
-          </div>
+  <div className="relative">
+    <Image
+      className="w-full h-auto"
+      src="https://assets-global.website-files.com/63eba862e4eb8f6d39e4c621/63ed4714204b6637b733596a_available-on-desktop-and-mobile-image-generativeai-x-webflow-template.png"
+      alt="Available on desktop and mobile"
+      width={1200} // Adjust the width based on the original image size
+      height={800} // Adjust the height based on the image aspect ratio
+    />
+  </div>
+  <Image
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed4776a4b189de702a2716_available-on-desktop-and-mobile-right-image-generativeai-x-webflow-template.png"
+    className="rounded-2xl absolute w-[120px] sm:w-[150px] top-32 left-5 sm:left-10"
+    alt="AI-generated image"
+    width={150} // Set appropriate width for this image
+    height={150} // Set appropriate height for this image based on aspect ratio
+  />
+</div>
 
           {/* Right content */}
           <div className="w-full md:w-5/12 px-4">
@@ -175,7 +181,7 @@ export default function Home() {
               Available on desktop and mobile
             </h1>
             <p className="mb-8 sm:mb-10 text-sm sm:text-base">
-              Access our AI image generator on any device. Whether you're on the
+              Access our AI image generator on any device. Whether you&apos;re on the
               go with your phone or working from your desktop, our platform is
               designed to be responsive and intuitive, ensuring you can create
               and edit images anytime, anywhere.
@@ -199,7 +205,7 @@ export default function Home() {
           <p className="text-sm sm:text-base">
             Experience the power of generative AI without any cost. Create
             stunning visuals, generate creative content, or explore AI-based
-            solutions for your projects. Whether you're a designer, marketer, or
+            solutions for your projects. Whether you&apos;re a designer, marketer, or
             just curious about AI, this tool will help you bring your ideas to
             life in no time.
           </p>
@@ -213,11 +219,13 @@ export default function Home() {
         </div>
 
         <div className="w-full md:w-6/12 p-4 ">
-          <img
-            src="https://assets-global.website-files.com/63eba862e4eb8f6d39e4c621/63ed4e029a674e0a8d11dd4f_try-generative-ai-for-free-today-image-generativeai-x-webflow-template.png"
-            alt="Try generative AI for free"
-            className="w-full h-auto rounded-lg"
-          />
+        <Image
+  src="https://assets-global.website-files.com/63eba862e4eb8f6d39e4c621/63ed4e029a674e0a8d11dd4f_try-generative-ai-for-free-today-image-generativeai-x-webflow-template.png"
+  alt="Try generative AI for free"
+  width={1200} // Set an appropriate width based on the original image size
+  height={800} // Set an appropriate height based on the aspect ratio
+  className="w-full h-auto rounded-lg"
+/>
         </div>
       </section>
 
@@ -228,7 +236,7 @@ export default function Home() {
         <p className="w-full lg:w-8/12 mx-auto text-center mb-10">
           Explore the versatility of generative AI by creating diverse image
           styles. From stunning 3D visuals to lifelike representations, our tool
-          empowers you to unleash your creativity. Whether you're crafting
+          empowers you to unleash your creativity. Whether you&apos;re crafting
           digital art or diving into fantastical realms, you can bring your
           imaginative concepts to life with ease and speed.
         </p>
@@ -260,33 +268,45 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 pt-14">
-          <img
-            className="rounded-2xl"
-            src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5b6c612fe54e57c1c989_3d-image-01-generativeai-x-webflow-template.jpg"
-            alt="3D Image"
-          />
-          <img
-            className="rounded-2xl"
-            src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5d9876e014239ac64ae1_realistic-image-01-generativeai-x-webflow-template.jpg"
-            alt="Realistic Image"
-          />
-          <img
-            className="rounded-2xl"
-            src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5d977c72ebea8691ccf7_realistic-image-05-generativeai-x-webflow-template.jpg"
-            alt="Another Realistic Image"
-          />
-          <img
-            className="rounded-2xl"
-            src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5ed547a02d540eadddd2_digital-art-image-02-generativeai-x-webflow-template.jpg"
-            alt="Digital Art Image"
-          />
-          <img
-            className="rounded-2xl"
-            src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed858935fcf382c3bbe67a_fantasy-image-02-generativeai-x-webflow-template.jpg"
-            alt="Fantasy Image"
-          />
-        </div>
+
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 pt-14">
+  <Image
+    className="rounded-2xl"
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5b6c612fe54e57c1c989_3d-image-01-generativeai-x-webflow-template.jpg"
+    alt="3D Image"
+    width={500} // Adjust width based on the original size
+    height={600} // Adjust height based on the aspect ratio
+  />
+  <Image
+    className="rounded-2xl"
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5d9876e014239ac64ae1_realistic-image-01-generativeai-x-webflow-template.jpg"
+    alt="Realistic Image"
+    width={500} // Adjust width based on the original size
+    height={600} // Adjust height based on the aspect ratio
+  />
+  <Image
+    className="rounded-2xl"
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5d977c72ebea8691ccf7_realistic-image-05-generativeai-x-webflow-template.jpg"
+    alt="Another Realistic Image"
+    width={500} // Adjust width based on the original size
+    height={600} // Adjust height based on the aspect ratio
+  />
+  <Image
+    className="rounded-2xl"
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed5ed547a02d540eadddd2_digital-art-image-02-generativeai-x-webflow-template.jpg"
+    alt="Digital Art Image"
+    width={500} // Adjust width based on the original size
+    height={600} // Adjust height based on the aspect ratio
+  />
+  <Image
+    className="rounded-2xl"
+    src="https://cdn.prod.website-files.com/63eba862e4eb8f6d39e4c621/63ed858935fcf382c3bbe67a_fantasy-image-02-generativeai-x-webflow-template.jpg"
+    alt="Fantasy Image"
+    width={500} // Adjust width based on the original size
+    height={600} // Adjust height based on the aspect ratio
+  />
+</div>
+
       </section>
 
       <section className="pb-14 test bg-black">

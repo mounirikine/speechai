@@ -1,6 +1,7 @@
 "use client";
 
 import axios from "axios";
+import Image from "next/image";
 import React, { useState } from "react";
 
 const options = [
@@ -151,13 +152,13 @@ const CreateNew = () => {
             body: JSON.stringify(data),
           }
         );
-  
+
         // Check if the response is OK (status in the range 200-299)
         if (!response.ok) {
           const errorText = await response.text(); // Get the error message
           throw new Error(`Error: ${response.status} ${errorText}`);
         }
-  
+
         const result = await response.blob();
         return result;
       } catch (error) {
@@ -165,32 +166,36 @@ const CreateNew = () => {
         throw error; // Rethrow to handle it outside if needed
       }
     }
-  
+
     try {
       const imageUrls = []; // Array to store generated image URLs
-  
+
       // Use a for...of loop to await each image generation
       for (const element of videoScript) {
         const imageBlob = await query({ inputs: element.imagePrompt });
         const imageUrl = URL.createObjectURL(imageBlob);
         imageUrls.push(imageUrl); // Store each image URL
-  
+
         // Optionally, if you want to set the image state for each image
         setImage(imageUrl); // Update the state with the latest image URL
       }
-      
+
       // If you want to set all images at once (if setImage handles multiple images)
       // setImages(imageUrls); // Uncomment if you have a state for multiple images
-  
     } catch (error) {
       console.error("Failed to generate image:", error);
     }
   };
-  
-  
+
   return (
     <div className="p-10 w-full max-w-full mx-auto">
-      <img src={image} alt="" srcset="" />
+      <Image
+        src={image}
+        alt="Description of the image"
+        width={800} // Set an appropriate width
+        height={600} // Set an appropriate height
+        layout="responsive" // Ensures responsive behavior if needed
+      />
       <div className="p-8 bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl font-semibold mb-4">Create New Content</h1>
         <p className="text-gray-600 mb-6">
